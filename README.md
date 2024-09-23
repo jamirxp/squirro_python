@@ -8,11 +8,12 @@ Requests library (already included in the requirements.txt)
 
 # Comments
 Based on the provided Task and Appendix Codes, here are my comments:
-1. I only followed what is needed to be printed based on the Appendix codes
+1. I only followed what is needed to be printed based on the Appendix codes. But there is a commented code to display each of the flat article dictionary if needed.
 print(f" - {item['_id']} - {item['headline.main']}")
-2. I notice as well that connect and getSchema function are not being used. I did not do any changes to the function since it is not part of the requirements.
-3. In the getSchema function, some are incorrect like id, based on the json response from API, it is "_id". But same on #2 i did not do any changes.
-4. I notice too that the batch printing is never ending. It is best to add a max batches. I did not add these, because it is not part of requirements.
+2. I updated the code for connect function to cater for inc_column and max_inc_value. There is a sample code under __main__ if wanted to use it for testing: This will filter the pub_date based on the date provided. It will be the begin_date in the API parameter.
+3. Added flat_dictionary function to create the dictionary with all the data in the json response.
+4. getDataBatch is updated to cater for pagination of the API request and handle the article received using the flat_dictionary function.
+5. getSchema is changed to use the schema created in the getDataBatch (this is based on the API json response)
 
 # How to Download and Run
 
