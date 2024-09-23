@@ -8,6 +8,9 @@ Skeleton for Squirro Delivery Hiring Coding Challenge
 August 2021
 """
 
+# Submitted by: Mark Neil S Ocampo
+# Date: 23 September 2024
+
 log = logging.getLogger(__name__)
 
 class NYTimesSource(object):
